@@ -10,7 +10,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1,2;
-    height: 900px;
+    height: 1700px;
     background-color: blanchedalmond;
 }
 
@@ -65,7 +65,13 @@ body {
 .item3,
 .item4,
 .item5,
-.item6 {
+.item6,
+.item7,
+.item8,
+.item9,
+.item10,
+.item11,
+.item12{
     width: 30%;
     margin-bottom: 20px;
     text-align: center;
@@ -76,7 +82,13 @@ body {
 .item3 img,
 .item4 img,
 .item5 img,
-.item6 img {
+.item6 img,
+.item7 img,
+.item8 img,
+.item9 img,
+.item10 img,
+.item11 img,
+.item12 img{
     max-width: 100%;
 }
 
@@ -112,69 +124,44 @@ body {
     bottom: 0;
     width: 100%;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 600px) {
+   
+    .header img {
+        max-width: 100%;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu a {
+        margin-bottom: 10px;
+    }
     .noidung {
-        padding: 0 50px;
+        padding: 10px;
     }
-
-    .item1,
-    .item2,
-    .item3,
-    .item4,
-    .item5,
-    .item6 {
-        width: 30%;
+    .box {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
     }
-}
-
-/* CSS cho màn hình trung bình (iPad) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .noidung {
-        padding: 0 30px;
-    }
-
-    .item1,
-    .item2,
-    .item3,
-    .item4,
-    .item5,
-    .item6 {
-        width: 45%;
-    }
-}
-
-/* CSS cho thiết bị di động */
-@media only screen and (max-width: 767px) {
-    .noidung {
-        padding: 0 15px;
-    }
-
-    .item1,
-    .item2,
-    .item3,
-    .item4,
-    .item5,
-    .item6 {
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .item11, .item12 {
         width: 100%;
     }
+}
 
-    .menu {
-        flex-direction: column;
-    }
 
-    .menu a {
-        display: block;
-        margin: 5px 0;
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+ 
+    .box {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* CSS cho footer */
-.footer {
-    text-align: center;
-    background: #333;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+
+@media only screen and (min-width: 1025px) {
+   
+    .box {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
